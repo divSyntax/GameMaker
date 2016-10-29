@@ -20,18 +20,20 @@ namespace FarmerGUI
         public FarmerGUI()
         {
             InitializeComponent();
+            backGround();
         }
 
         private void FarmerGUI_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             Farmer farmer = new Farmer();
-            var rbuttons = new List<CheckBox> {checkBox1,checkBox2,checkBox3 };
-            var lbuttons = new List<CheckBox> { checkBox4, checkBox5, checkBox6 };
+            var rbuttons = new List<CheckBox> {grainSouth,chickenSouth,foxSouth };
+            var lbuttons = new List<CheckBox> { chickenNorth, grainNorth, foxNorth };
             int x = farmer1.Location.X;
             int y = fox.Location.X;
             int z = grain.Location.X;
@@ -46,55 +48,88 @@ namespace FarmerGUI
       
 
 
-            if (x <= 0 && checkBox2.Checked)
+            if (x <= 0 && chickenSouth.Checked)
             {
-                //farmer1.Visible = false;
+               
                 chicken2.Location = new Point(36,86);
-                checkBox1.Checked = false; 
-                checkBox3.Checked = false;
+                grainSouth.Checked = false; 
+                foxSouth.Checked = false;
                 chicken2.Left = -50;
                 farmer1.Left = 0;
                 chicken2.Left = 0;
-                farmer1.Location = new Point(252 ,456);
-                //this.InitializeComponent();
-                MessageBox.Show("go bck for rest.");
+                //farmer1.Location = new Point(252 ,456);
+          
 
             }else
-            if(x <= 0 && checkBox1.Checked)
+            if(x <= 0 && grainSouth.Checked)
             {
-                grain.Location = new Point(14,451);
-                checkBox2.Checked = false;
-                checkBox3.Checked = false;
+                grain.Location = new Point(12,351);
+                chickenSouth.Checked = false;
+                foxSouth.Checked = false;
                 grain.Left = -50;
                 farmer1.Left = 0;
                  grain.Left = 0;
-                farmer1.Location = new Point(252, 456);
-                //this.InitializeComponent();
-                MessageBox.Show("go bck for rest.");
+               // farmer1.Location = new Point(252, 456);
+           
             }else
 
-            if (x <= 0 && checkBox3.Checked)
+            if (x <= 0 && foxSouth.Checked)
             {
-                fox.Location = new Point(36,420);
-                checkBox1.Checked = false;
-                checkBox2.Checked = false;
+                fox.Location = new Point(12,540);
+                grainSouth.Checked = false;
+                chickenSouth.Checked = false;
                 fox.Left = -50;
                 farmer1.Left = 0;
                 fox.Left = 0;
-                farmer1.Location = new Point(252, 456);
-                //this.InitializeComponent();
-                MessageBox.Show("go bck for rest.");
-            }else
+                //farmer1.Location = new Point(252, 456);
+             
+            }
 
             if(chicken2.Left == 0 && grain.Left == 0 && fox.Left == 0)
             {
-                MessageBox.Show("YOU WIN!!");
+                Win();
+                MessageBox.Show("Congradulations, YOU WIN!!");
+                this.Controls.Clear();
+                this.InitializeComponent();
             }
 
-         
+            if (grain.Left == 0 && fox.Left != 0 && chicken2.Left != 0 && x == 0)
+            {
+                Eat();
+                MessageBox.Show("Fox ate the chicken!");
+                this.Controls.Clear();
+                this.InitializeComponent();
+           
+            }
 
+            if (chicken2.Left <= 0 && grain.Left <= 0 && x >= 0)
+            {
+                playSimpleSound();
+                MessageBox.Show("Chicken ate grain!");
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
+            if (fox.Left == 0 && chicken2.Left == 0 && grain.Left != 0)
+            {
+
+                Eat();
+                MessageBox.Show("Fox ate the chicken!");
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
+
+            if(fox.Left == 0 && chicken2.Left != 0 && grain.Left != 0)
+            {
+                playSimpleSound();
+                MessageBox.Show("Chicken ate grain!");
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
+
+
+
+            //reset controls
             //this.Controls.Clear();
-
             //this.InitializeComponent();
 
 
@@ -114,41 +149,82 @@ namespace FarmerGUI
             int a = chicken2.Location.X;
 
 
-            farmer1.Location = new Point(x + 50);
+            //farmer1.Location = new Point(x + 50);
             //chicken2.Location = new Point(a + 40);
-            if (x >= 600 && checkBox4.Checked)
+       
+            if (x <= 600 && chickenNorth.Checked)
             {
-                checkBox5.Checked = false;
-                checkBox6.Checked = false;
+
+                chicken2.Left = +50;
+                grainNorth.Checked = false;
+                foxNorth.Checked = false;
                 chicken2.Location = new Point(672,276);
-                //chicken2.Left = + 50;
+      
                 farmer1.Left = 0;
-               // chicken2.Left = 0;
-                farmer1.Location = new Point(252, 456);
-                MessageBox.Show("Home!");
-            }else if(x >= 600 && checkBox5.Checked)
+        
+                farmer1.Location = new Point(456, 252);
+
+            }else if(x <= 600 && grainNorth.Checked)
             {
-                checkBox4.Checked = false;
-                checkBox6.Checked = false;
+                chickenNorth.Checked = false;
+                foxNorth.Checked = false;
                 grain.Location = new Point(617, 43);
-                //chicken2.Left = + 50;
+       
                 farmer1.Left = 0;
-                // chicken2.Left = 0;
-                farmer1.Location = new Point(252, 456);
-                MessageBox.Show("Home!");
-            }else if(x >= 600 && checkBox6.Checked)
+
+                farmer1.Location = new Point(456, 252);
+
+            }else if(x <= 600 && foxNorth.Checked)
             {
-                checkBox4.Checked = false;
-                checkBox5.Checked = false;
+                chickenNorth.Checked = false;
+                grainNorth.Checked = false;
                 fox.Location = new Point(589,423);
-                //chicken2.Left = + 50;
+  
                 farmer1.Left = 0;
-                // chicken2.Left = 0;
-                farmer1.Location = new Point(252, 456);
-                MessageBox.Show("Home!");
+
+                farmer1.Location = new Point(456, 252);
+           
             }
         }
 
-     
+        private void playSimpleSound()
+        {
+            System.Media.SoundPlayer simpleSound = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Downloads\chickeating.wav");
+            simpleSound.Play();
+        }
+        private void backGround()
+        {
+         
+                System.Media.SoundPlayer bck = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Pictures\farmv.wav");
+            bck.PlayLooping();//sound stops playing after the eating sounds begin!
+
+        }
+
+        private void Eat()
+        {
+            System.Media.SoundPlayer eat = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Pictures\eat.wav");
+            eat.Play();
+
+        }
+
+        private void Win()
+        {
+            System.Media.SoundPlayer win = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Downloads\win.wav");
+            win.Play();
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int x = farmer1.Location.X;
+            farmer1.Location = new Point(456, 252);
+         
+            if (x == 456)
+            {
+                farmer1.Location = new Point(166);
+            }else
+            {
+                
+            }
+        }
     }
 }

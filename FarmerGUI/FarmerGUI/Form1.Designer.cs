@@ -35,12 +35,12 @@
             this.grain = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.grainSouth = new System.Windows.Forms.CheckBox();
+            this.chickenSouth = new System.Windows.Forms.CheckBox();
+            this.foxSouth = new System.Windows.Forms.CheckBox();
+            this.chickenNorth = new System.Windows.Forms.CheckBox();
+            this.grainNorth = new System.Windows.Forms.CheckBox();
+            this.foxNorth = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +51,8 @@
             this.date1012016ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.v10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button3 = new System.Windows.Forms.Button();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.instructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.farmer1)).BeginInit();
@@ -106,7 +108,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 66);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
+            this.button1.Text = "Move to North";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -121,65 +123,65 @@
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // checkBox1
+            // grainSouth
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(672, 238);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.grainSouth.AutoSize = true;
+            this.grainSouth.Location = new System.Drawing.Point(672, 238);
+            this.grainSouth.Name = "grainSouth";
+            this.grainSouth.Size = new System.Drawing.Size(77, 17);
+            this.grainSouth.TabIndex = 6;
+            this.grainSouth.Text = "grainSouth";
+            this.grainSouth.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chickenSouth
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(672, 400);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chickenSouth.AutoSize = true;
+            this.chickenSouth.Location = new System.Drawing.Point(672, 400);
+            this.chickenSouth.Name = "chickenSouth";
+            this.chickenSouth.Size = new System.Drawing.Size(92, 17);
+            this.chickenSouth.TabIndex = 7;
+            this.chickenSouth.Text = "chickenSouth";
+            this.chickenSouth.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // foxSouth
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(672, 638);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 8;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.foxSouth.AutoSize = true;
+            this.foxSouth.Location = new System.Drawing.Point(672, 638);
+            this.foxSouth.Name = "foxSouth";
+            this.foxSouth.Size = new System.Drawing.Size(68, 17);
+            this.foxSouth.TabIndex = 8;
+            this.foxSouth.Text = "foxSouth";
+            this.foxSouth.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chickenNorth
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(12, 183);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 9;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chickenNorth.AutoSize = true;
+            this.chickenNorth.Location = new System.Drawing.Point(12, 183);
+            this.chickenNorth.Name = "chickenNorth";
+            this.chickenNorth.Size = new System.Drawing.Size(90, 17);
+            this.chickenNorth.TabIndex = 9;
+            this.chickenNorth.Text = "chickenNorth";
+            this.chickenNorth.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // grainNorth
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(12, 351);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 10;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.grainNorth.AutoSize = true;
+            this.grainNorth.Location = new System.Drawing.Point(12, 351);
+            this.grainNorth.Name = "grainNorth";
+            this.grainNorth.Size = new System.Drawing.Size(75, 17);
+            this.grainNorth.TabIndex = 10;
+            this.grainNorth.Text = "grainNorth";
+            this.grainNorth.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // foxNorth
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(12, 540);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
-            this.checkBox6.TabIndex = 11;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.foxNorth.AutoSize = true;
+            this.foxNorth.Location = new System.Drawing.Point(12, 540);
+            this.foxNorth.Name = "foxNorth";
+            this.foxNorth.Size = new System.Drawing.Size(66, 17);
+            this.foxNorth.TabIndex = 11;
+            this.foxNorth.Text = "foxNorth";
+            this.foxNorth.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -187,7 +189,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 66);
             this.button2.TabIndex = 12;
-            this.button2.Text = "button2";
+            this.button2.Text = "Move to South";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -206,6 +208,7 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.malcomBroadnaxToolStripMenuItem,
             this.versionToolStripMenuItem,
+            this.toolStripSeparator1,
             this.instructionsToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(40, 20);
@@ -238,7 +241,7 @@
             // 
             this.assignment8ToolStripMenuItem.Name = "assignment8ToolStripMenuItem";
             this.assignment8ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.assignment8ToolStripMenuItem.Text = "Assignment: 8";
+            this.assignment8ToolStripMenuItem.Text = "Assignment: 3A";
             // 
             // date1012016ToolStripMenuItem
             // 
@@ -260,6 +263,21 @@
             this.v10ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.v10ToolStripMenuItem.Text = "V1.0";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(254, 450);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(148, 78);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Move farmer from North/south";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
             // instructionsToolStripMenuItem
             // 
             this.instructionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -272,7 +290,6 @@
             // 
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox1.Text = "Choose one check box at a time.";
             // 
             // FarmerGUI
             // 
@@ -281,13 +298,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(891, 673);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.foxNorth);
+            this.Controls.Add(this.grainNorth);
+            this.Controls.Add(this.chickenNorth);
+            this.Controls.Add(this.foxSouth);
+            this.Controls.Add(this.chickenSouth);
+            this.Controls.Add(this.grainSouth);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grain);
@@ -319,12 +337,12 @@
         private System.Windows.Forms.PictureBox grain;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Exit;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox grainSouth;
+        private System.Windows.Forms.CheckBox chickenSouth;
+        private System.Windows.Forms.CheckBox foxSouth;
+        private System.Windows.Forms.CheckBox chickenNorth;
+        private System.Windows.Forms.CheckBox grainNorth;
+        private System.Windows.Forms.CheckBox foxNorth;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
@@ -335,6 +353,8 @@
         private System.Windows.Forms.ToolStripMenuItem date1012016ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem versionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem v10ToolStripMenuItem;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem instructionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }

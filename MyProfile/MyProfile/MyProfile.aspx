@@ -11,7 +11,7 @@
     <div>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CartNumber,ProductID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="199px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CartNumber,ProductID" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="199px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="CartNumber" HeaderText="CartNumber" ReadOnly="True" SortExpression="CartNumber" />
@@ -28,7 +28,7 @@
             <SortedDescendingCellStyle BackColor="#FCF6C0" />
             <SortedDescendingHeaderStyle BackColor="#820000" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AcmeShoppeConnectionString %>" ProviderName="<%$ ConnectionStrings:AcmeShoppeConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Cart_LineItems]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
     </form>
 </body>
 </html>
