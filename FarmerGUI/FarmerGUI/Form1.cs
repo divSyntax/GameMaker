@@ -31,34 +31,28 @@ namespace FarmerGUI
         private void button1_Click(object sender, EventArgs e)
         {
            
-            Farmer farmer = new Farmer();
+            
             var rbuttons = new List<CheckBox> {grainSouth,chickenSouth,foxSouth };
             var lbuttons = new List<CheckBox> { chickenNorth, grainNorth, foxNorth };
+
+            //Get x location of images
             int x = farmer1.Location.X;
             int y = fox.Location.X;
             int z = grain.Location.X;
             int a = chicken2.Location.X;
 
-
-
-            farmer1.Location = new Point(x - 50);
-
+            farmer1.Location = new Point(x - 50);//moves the image 50px to the left
          
-
-      
-
-
             if (x <= 0 && chickenSouth.Checked)
             {
-               
+              
                 chicken2.Location = new Point(36,86);
                 grainSouth.Checked = false; 
                 foxSouth.Checked = false;
                 chicken2.Left = -50;
-                farmer1.Left = 0;
+                //stops image at the far left side of the form
+                farmer1.Left = 0; 
                 chicken2.Left = 0;
-                //farmer1.Location = new Point(252 ,456);
-          
 
             }else
             if(x <= 0 && grainSouth.Checked)
@@ -69,7 +63,7 @@ namespace FarmerGUI
                 grain.Left = -50;
                 farmer1.Left = 0;
                  grain.Left = 0;
-               // farmer1.Location = new Point(252, 456);
+         
            
             }else
 
@@ -81,7 +75,7 @@ namespace FarmerGUI
                 fox.Left = -50;
                 farmer1.Left = 0;
                 fox.Left = 0;
-                //farmer1.Location = new Point(252, 456);
+          
              
             }
 
@@ -189,27 +183,27 @@ namespace FarmerGUI
 
         private void playSimpleSound()
         {
-            System.Media.SoundPlayer simpleSound = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Downloads\chickeating.wav");
+            System.Media.SoundPlayer simpleSound = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Desktop\FarmerGUI\chickeating.wav");
             simpleSound.Play();
         }
         private void backGround()
         {
          
-                System.Media.SoundPlayer bck = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Pictures\farmv.wav");
+                System.Media.SoundPlayer bck = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Desktop\FarmerGUI\farmv.wav");
             bck.PlayLooping();//sound stops playing after the eating sounds begin!
 
         }
 
         private void Eat()
         {
-            System.Media.SoundPlayer eat = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Pictures\eat.wav");
+            System.Media.SoundPlayer eat = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Desktop\FarmerGUI\eat.wav");
             eat.Play();
 
         }
 
         private void Win()
         {
-            System.Media.SoundPlayer win = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Downloads\win.wav");
+            System.Media.SoundPlayer win = new System.Media.SoundPlayer(@"C:\Users\DivSyntax\Desktop\FarmerGUI\win.wav");
             win.Play();
 
         }
